@@ -4,13 +4,15 @@ Created on Mon Oct  7 14:15:27 2024
 
 @author: lenovo
 """
+#check withdraw amount is in account or not
 def check_bal(amount,avl_balance):
     if((avl_balance-amount)<0):
         print("Insufficient Balance")
         return False
     else:
         return True
-    
+
+#class for all method of ATM simulation 
 class ATM:
     def __init__(self, balance=0):
         self.balance=balance
@@ -26,6 +28,7 @@ class ATM:
         self.check_balance()
 
 
+# atm simulation function
 def atm_simulation():
     atm=ATM(1000.00)   #initial balance 
     print('Welcome to ATM simulation')
@@ -49,4 +52,4 @@ def atm_simulation():
              break
 
 
-atm_simulation()
+atm_simulation()  #call atm_sumulation function
